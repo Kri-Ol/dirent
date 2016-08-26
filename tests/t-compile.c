@@ -9,6 +9,7 @@
  * under the MIT license.  For all details and documentation, see
  * https://github.com/tronkko/dirent
  */
+
 #include <dirent.h>
 #include <winsock2.h>
 #include <ws2tcpip.h>
@@ -17,8 +18,7 @@
 #include <string.h>
 
 int
-main(
-    int argc, char *argv[]) 
+main(int argc, char *argv[]) 
 {
     (void) argc;
     (void) argv;
