@@ -49,8 +49,7 @@ static FILE *db = NULL;
 
 
 int
-main(
-    int argc, char *argv[]) 
+main(int argc, char *argv[]) 
 {
     int i;
     int ok;
@@ -96,8 +95,7 @@ main(
 
 /* Find files recursively */
 static int
-update_directory(
-    const wchar_t *dirname)
+update_directory(const wchar_t *dirname)
 {
     _WDIR *dir;
     wchar_t buffer[PATH_MAX + 2];
@@ -178,8 +176,7 @@ update_directory(
 
 /* Store file name to locate.db */
 static void
-db_store(
-    const wchar_t *dirname)
+db_store(const wchar_t *dirname)
 {
     if (db) {
         /* Output line to file */
@@ -192,8 +189,7 @@ db_store(
 
 /* Open database file locate.db */
 static void
-db_open(
-    void)
+db_open(void)
 {
     if (db == NULL) {
         errno_t error;
@@ -209,12 +205,10 @@ db_open(
 
 /* Close database file */
 static void
-db_close(
-    void)
+db_close(void)
 {
     if (db) {
         fclose (db);
         db = NULL;
     }
 }
-

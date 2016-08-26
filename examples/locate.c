@@ -21,6 +21,7 @@
  * under the MIT license.  For all details and documentation, see
  * https://github.com/tronkko/dirent
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -46,8 +47,7 @@ static FILE *db = NULL;
 
 
 int
-main(
-    int argc, char *argv[]) 
+main(int argc, char *argv[]) 
 {
     int i;
 
@@ -88,8 +88,7 @@ main(
 
 /* Match pattern against files in locate.db file */
 static int
-db_locate(
-    const wchar_t *pattern)
+db_locate(const wchar_t *pattern)
 {
     wchar_t buffer[PATH_MAX + 1];
     int count = 0;
@@ -114,8 +113,7 @@ db_locate(
 
 /* Match pattern against file name */
 static int
-db_match(
-    const wchar_t *fn, const wchar_t *pattern) 
+db_match(const wchar_t *fn, const wchar_t *pattern) 
 {
     wchar_t *p;
     wchar_t base[PATH_MAX + 1];
@@ -173,8 +171,7 @@ db_match(
  * that new-line at the end of line is not included.
  */
 static int
-db_read(
-    wchar_t *buffer, size_t max)
+db_read(wchar_t *buffer, size_t max)
 {
     size_t i = 0;
     wchar_t c;
@@ -234,8 +231,7 @@ db_read(
 
 /* Open database file locate.db */
 static void
-db_open(
-    void)
+db_open(void)
 {
     if (db == NULL) {
         errno_t error;
@@ -251,12 +247,10 @@ db_open(
 
 /* Close database file */
 static void
-db_close(
-    void)
+db_close(void)
 {
     if (db) {
         fclose (db);
         db = NULL;
     }
 }
-

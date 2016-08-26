@@ -26,17 +26,16 @@
  * under the MIT license.  For all details and documentation, see
  * https://github.com/tronkko/dirent
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <dirent.h>
 
-static void list_directory (const char *dirname);
-
+static void list_directory(const char *dirname);
 
 int
-main(
-    int argc, char *argv[]) 
+main(int argc, char *argv[]) 
 {
     int i;
 
@@ -58,8 +57,7 @@ main(
  * List files and directories within a directory.
  */
 static void
-list_directory(
-    const char *dirname)
+list_directory(const char *dirname)
 {
     DIR *dir;
     struct dirent *ent;
@@ -96,4 +94,3 @@ list_directory(
         exit (EXIT_FAILURE);
     }
 }
-

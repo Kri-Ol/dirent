@@ -33,10 +33,8 @@
 
 static int find_directory (const char *dirname);
 
-
 int
-main(
-    int argc, char *argv[]) 
+main(int argc, char *argv[]) 
 {
     int i;
     int ok;
@@ -60,8 +58,7 @@ main(
 
 /* Find files and subdirectories recursively */
 static int
-find_directory(
-    const char *dirname)
+find_directory(const char *dirname)
 {
     DIR *dir;
     char buffer[PATH_MAX + 2];
@@ -140,5 +137,3 @@ find_directory(
 
     return ok;
 }
-
-
